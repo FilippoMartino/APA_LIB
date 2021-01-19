@@ -61,8 +61,7 @@ int BST_empty(BST bst);
 int BST_search(BST bst, int key);
 
 /**
- Si occupa di inserire l'elemento item in foglia, tale elemento deve quindi essere funzionalmente una
- foglia, per inserimenti all'interno del BST usare inserimento in radice
+ Si occupa di inserire l'elemento item in foglia
  
  @param bst BST in cui fare inserimento in foglia
  @param item item da inserire
@@ -71,8 +70,7 @@ int BST_search(BST bst, int key);
 void BST_insert_leaf(BST bst, int item);
 
 /**
- Si occupa dell'inserimento in radice di un elemento item, che può avvenire in qualisiasi
- punto del BST, si applicano le  rotazioni per mantenere la proprietà funzionale
+ Si occupa dell'inserimento in radice di un elemento item
  
  @param bst BST sul quale effettuare l'inserimento
  @param item oggetto da inserire

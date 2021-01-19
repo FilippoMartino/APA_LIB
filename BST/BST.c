@@ -136,17 +136,17 @@ static void tree_print(link h, link z, Strategy strategy){
 		return;
 	
 	if (strategy == PREORDER)
-		printf("%d", h->item);
+		printf("%d ", h->item);
 	
 	tree_print(h->left, z, strategy);
 	
 	if (strategy == INORDER)
-		printf("%d", h->item);
+		printf("%d ", h->item);
 	
 	tree_print(h->right, z, strategy);
 	
 	if (strategy == POSTORDER)
-		printf("%d", h->item);
+		printf("%d ", h->item);
 	
 }
 
@@ -411,8 +411,6 @@ void BST_free(BST bst){
 	/* Deallochiamo tutto l'albero */
 	tree_free(bst->root, bst->z);
 	
-	/* Restano il puntatore alla radice e quello al nodo sentinella */
-	free(bst->root);
 	free(bst->z);
 	
 }
@@ -466,6 +464,7 @@ void BST_visit(BST bst, Strategy strategy){
 	}
 	
 	tree_print(bst->root, bst->z, strategy);
+	printf("\n");
 	
 }
 
